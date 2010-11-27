@@ -22,5 +22,7 @@
 
 - (IBAction)send;
 
+- (void)refresh;
+
 @end
 

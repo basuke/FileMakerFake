@@ -3,3 +3,5 @@ FileMaker Fake
 
 To develop FileMaker aware iPhone application in simurator.
 
+- can open custom scheme URL.
+- can handle fm7script: scheme which mimic as FileMaker Go.

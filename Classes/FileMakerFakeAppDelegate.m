@@ -36,6 +36,10 @@
 	return NO;
 }
 
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+	[viewController refresh];
+}
+
 - (void)applicationWillTerminate:(UIApplication *)application {
 }
 

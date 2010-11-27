@@ -12,17 +12,6 @@
 
 @synthesize info;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-	UIPasteboard* pasteBoard = [UIPasteboard generalPasteboard];
-	
-	clipboardImage.image = pasteBoard.image;
-	clipboardText.text = pasteBoard.string;
-	
-	infoLabel.text = self.info;
-}
-
 - (void)dealloc {
 	[sendButton release];
 	[urlField release];
@@ -31,10 +20,25 @@
 	
 	[clipboardText release];
 	[clipboardImage release];
-
+	
 	self.info = nil;
 	
 	[super dealloc];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+	
+	infoLabel.text = self.info;
+	
+	[self refresh];
+}
+
+- (void)refresh {
+	UIPasteboard* pasteBoard = [UIPasteboard generalPasteboard];
+	
+	clipboardImage.image = pasteBoard.image;
+	clipboardText.text = pasteBoard.string;
 }
 
 - (IBAction)send {
