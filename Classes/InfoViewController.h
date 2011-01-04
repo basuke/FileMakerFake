@@ -10,7 +10,7 @@
 
 @interface InfoViewController : UIViewController {
 	IBOutlet UIButton *sendButton;
-	IBOutlet UITextField *urlField;
+	IBOutlet UITextView *urlEntry;
 	
 	IBOutlet UILabel *infoLabel;
 	

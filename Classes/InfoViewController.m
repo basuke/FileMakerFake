@@ -14,7 +14,7 @@
 
 - (void)dealloc {
 	[sendButton release];
-	[urlField release];
+	[urlEntry release];
 	
 	[infoLabel release];
 	
@@ -42,7 +42,7 @@
 }
 
 - (IBAction)send {
-	if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlField.text]]) {
+	if ([[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlEntry.text]]) {
 		infoLabel.text = @"OK";
 	} else {
 		infoLabel.text = @"Cannot open url.";
